@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#d32f2f">
+  <title>Candy Fruits | Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">CF</span>
+      <span>
+        <strong>Candy Fruits</strong>
+        <small>كاندي فروتس · Fresh bites, bold flavor</small>
+      </span>
+    </a>
+    <button id="themeToggle" class="theme-toggle">
+      ☾ <span>Dark mode</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">THE MENU</span>
+        <h1>Good food.<br><em>Great mood.</em></h1>
+        <p>Find your favorite bites, check the prices, and make it a delicious day.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#menu">Explore menu ↘</a>
+          <a class="text-link" id="heroCall">Call us</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="orbit"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="fruit fruit-a">🍓</div>
+        <div class="fruit fruit-b">🍟</div>
+        <div class="fruit fruit-c">🍋</div>
+        <div class="hero-sticker">
+          <span>FRESH</span>
+          <strong>& TASTY</strong>
+          <small>كل لقمة حكاية</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MADE FOR YOUR CRAVINGS</span>
+          <h2>Explore the menu</h2>
+          <p class="muted">Browse by category or search in English or Arabic.</p>
+        </div>
+        <div class="menu-count">
+          <strong id="itemCount">0</strong>
+          <span>items</span>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          ⌕
+          <input id="searchInput" type="search"
+                 placeholder="Search menu…" autocomplete="off">
+        </label>
+        <button id="clearSearch" class="clear-btn">Clear</button>
+      </div>
+
+      <nav id="categoryPills" class="category-pills"
+           aria-label="Menu categories"></nav>
+
+      <div id="menuGrid" class="menu-grid" aria-live="polite"></div>
+
+      <p id="emptyState" class="empty-state" hidden>
+        No items found.
+      </p>
+
+      <p class="source-note">
+        Menu transcribed from your photo. Items marked “Check name”
+        have small or blurry text in the source image; confirm these
+        before publishing.
+      </p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <span class="eyebrow">COME SAY HELLO</span>
+        <h2>Ready for a bite?</h2>
+        <p>Call us for questions and orders.</p>
+      </div>
+      <div class="contact-actions" id="contactActions"></div>
+      <p class="address" id="address"></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Candy Fruits</span>
+    <span>Made with a little extra flavor <b>♥</b></span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
